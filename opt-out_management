@@ -1,0 +1,11 @@
+users = [
+    {"id": 1, "email": "alice@example.com", "marketing_opt_in": True},
+    {"id": 2, "email": "bob@example.com", "marketing_opt_in": False},
+]
+
+def enforce_opt_out(users):
+    for u in users:
+        if not u["marketing_opt_in"]:
+            print(f"Compliance: Do not send marketing to {u['email']}")
+
+enforce_opt_out(users)
